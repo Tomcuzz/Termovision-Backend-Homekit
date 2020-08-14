@@ -5,7 +5,7 @@ FROM golang:latest
 MAINTAINER "Thomas Cousin"
 
 # Set the Current Working Directory inside the container
-WORKDIR /go/src/github.com/tomcuzz/BedOccupancySensor/homekit/src
+WORKDIR /go/src/github.com/tomcuzz/Termovision-Backend-Homekit/src
 
 ENV HK_PIN="00102003"
 ENV HK_SERIAL="027TC-000001"
