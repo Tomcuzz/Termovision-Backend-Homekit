@@ -7,6 +7,7 @@ MAINTAINER "Thomas Cousin"
 # Set the Current Working Directory inside the container
 WORKDIR /go/src/github.com/tomcuzz/Termovision-Backend-Homekit/src
 
+# Setup environment veriables
 ENV HK_PIN="00102003"
 ENV HK_SERIAL="027TC-000001"
 
@@ -19,8 +20,8 @@ RUN go get -d -v ./...
 # Build the Go app
 RUN go build -o main main.go
 
-# Expose port 8080 to the outside world
-EXPOSE 8080
+# Expose port 8081 to the outside world
+EXPOSE 8081
 
 # Command to run the executable
 CMD ./main -hkpin ${HK_PIN} -hkserial ${HK_SERIAL}
